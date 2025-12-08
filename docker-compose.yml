@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  data_rater:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: synthetic_data_rater
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_SERVER_FILE_WATCHER_TYPE=poll
+    restart: unless-stopped

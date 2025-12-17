@@ -26,7 +26,7 @@ The app is fully containerized with Docker for easy local or server deployment.
 ```bash
 git clone https://github.com/ch4444rlie/app-sdrater.git
 cd app-sdrater
-docker-compose up -build
+docker-compose up --build
 ```
 Open http://localhost:8501 in your browser.
 
@@ -97,6 +97,7 @@ No fairness, privacy, or downstream task validation
 High score ≠ perfect for all use cases — always manually verify
 
 For more comprehensive evaluation, consider SDV's full metrics suite or SynthCity.
+
 
 
 
